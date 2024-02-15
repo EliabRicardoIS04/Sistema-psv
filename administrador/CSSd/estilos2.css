@@ -1,0 +1,127 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    
+    font-family:  'PT Serif', serif;;
+}
+html, body{
+    height: 100%;
+}
+
+
+body {
+    background:radial-gradient(circle, #f458, #42a5f5);
+}
+label{
+    color:white ;
+    text-decoration: solid;
+    
+}
+
+div.bienvenida{
+    position: absolute;
+    bottom: 80%;
+
+    
+    margin: auto;
+    text-align: center;
+    color: white;
+}
+div.bienvenida h2{
+    color:#ffc0cb;
+    font-weight: 1000;
+    font-size: 3.1em;
+}
+
+div.contenedor{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  
+    height: 100%;
+    width: 100%;
+   
+
+}
+
+div.prueba{
+    position: absolute;
+    top: 26%;
+    background-color: rgba(2, 0, 0, 0.0);
+    padding: 15px;
+}
+.bloque-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: row  ;
+    height: 300px;
+    width: 300px;
+    margin: auto;
+    background-color: rgba(2, 0, 0, 0.2);
+    padding: 15px;
+    box-shadow: 24px 24px 7px pink;
+}
+
+
+form.form{
+    position: relative; 
+    bottom: 20px;
+    
+}
+
+
+
+
+
+.btn {
+    position: relative;
+    top: 40px;
+    left: 35px;
+
+    background-color: rgb(2, 3, 4);
+    border: 2px solid black;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 20px;
+    color: white;
+    border-color: rgb(32, 218, 159);
+    padding: 5px;
+}
+
+
+.btn:hover {
+    line-height: 20px;
+    cursor:grab;
+    background-color: rgb(110, 110, 110);
+}
+
+input.input{
+    height: 25px;
+}
+
+label.label{
+    color:white;
+    font-weight: bold;
+}
+
+
+input.input::placeholder{
+    background-color: rgb(187, 133, 171);
+    color:black;
+}
+
+input.input:focus{
+    background: lightgray;
+}
+
+input.usuario::selection{
+
+}
+
+
+div.text::hover{
+
+}
+
+/*active*/
