@@ -2,7 +2,7 @@
  $page = "principal";
  ?>
 
-<?php include("template/encabezado.php"); 
+<?php include("app/views/template/encabezado.php"); 
 ?>
 
         <style>
@@ -159,4 +159,4 @@
         </main>
 
 
-<?php include("template/pie.php"); ?>
+<?php include("app/views/template/pie.php"); ?>
