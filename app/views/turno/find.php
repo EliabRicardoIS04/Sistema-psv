@@ -1,6 +1,6 @@
 <?php
 session_start();
-include_once '../../models/Turno.php';
+include_once "../../models/Turno.php";
 $turno = @$_SESSION["turno"];
 $turno = @unserialize($turno);
 
@@ -27,24 +27,24 @@ $turno = @unserialize($turno);
                 </tr>
                 <tr>
                     <th>jornada: </th>
-                    <td> <input type="text" name="jornada"  id="jornada" value="<?= @$turno->jornada ?>" required></td>
+                    <td> <input type="text" name="jornada"  id="jornada" value="<?= @$turno->jornada ?>" readonly></td>
                 </tr>
                 <tr>
                     <th>hora inicio: </th>
-                    <td> <input type="time" name="horaInicio"  id="horaInicio" value="<?= @$turno->horaInicio ?>" required></td>
+                    <td> <input type="time" name="horaInicio"  id="horaInicio" value="<?= @$turno->horaInicio ?>" readonly></td>
                 </tr>
                 <tr>
                     <th>hora fin: </th>
-                    <td> <input type="time" name="horaFin"  id="horaFin" value="<?= @$turno->horFin ?>" required></td>
+                    <td> <input type="time" name="horaFin"  id="horaFin" value="<?= @$turno->horFin ?>" readonly></td>
                 </tr>
                 <tr>
                     <th>Fecha: </th>
-                    <td> <input type="date" name="fecha"  id="fecha" value="<?= @$turno->fecha ?>" required></td>
+                    <td> <input type="date" name="fecha"  id="fecha" value="<?= @$turno->fecha ?>" readonly></td>
                 </tr>
 
                 <td colspan="2" style="text-align:center">
                     <input  type="hidden"  name="pagina"  value="buscar"/>
-                    <input  type="submit"  name="accion" i              d="acccion"  value="buscar"/>
+                    <input  type="submit"  name="accion" id="acccion"  value="buscar"/>
                     &nbsp;&nbsp;&nbsp;
                     <input type="reset" id="limpiar" value="limpiar"/>
                 </td>

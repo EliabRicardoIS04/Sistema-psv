@@ -1,14 +1,11 @@
 <?php
 include_once '../libs/bdConfig.php';
-class Cliente extends ActiveRecord\Model
 
+class Empleadoservicio extends ActiveRecord\Model
 {
-    private $clienteId;
-    private $ciudad;
-    private $departamento;
-    private $barrio;
-    private $carritosId;
-    private $facturasid;
+    private $empleadoServicioId;
+    private $sueldo;
+    private $jornada;
     private $persona;
 
 
@@ -21,7 +18,4 @@ class Cliente extends ActiveRecord\Model
     public function getCedula(){
         return $this->persona->getCedula();
     }
-
-
-
 }

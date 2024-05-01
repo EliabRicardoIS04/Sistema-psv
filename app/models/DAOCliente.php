@@ -5,7 +5,7 @@ include_once 'Cliente.php';
 class DAOCliente
 {
 
-    public static function agregar_servicio($cliente)
+    public static function agregar_cliente($cliente)
     {
         try {
             return $cliente->save();
@@ -14,38 +14,39 @@ class DAOCliente
         }
     }
 
-    public static function buscar_servicio($servicioId)
+    public static function buscar_cliente($clienteId)
     {
         try {
-            $servicio = Servicio::find($servicioId);
-            return $servicio;
+            $cliente = Cliente::find($clienteId);
+            return $cliente;
         } catch (Exception $error) {
-            throw new Exception("Error al consultar el servicio con id : $servicioId");
+            throw new Exception("Error al consultar el cliente con id : $clienteId");
         }
     }
 
-    public static function eliminar_servicio($servicioId)
+    public static function eliminar_cliente($clienteId)
     {
-        return Turno::delete_all(array('condition' => "servicioId = $servicioId"));
+        return Cliente::delete_all(array('condition' => "clienteId = $clienteId"));
     }
 
 
-    public static function modificar_servicio($servicio)
+    public static function modificar_cliente($cliente)
     {
-        return DAOTurno::agregar_turno($servicio);
+        return DAOCliente::agregar_cliente($cliente);
     }
 
-    public static function listar_servicio()
+    public static function listar_cliente()
     {
-        return servicio::all();
+        return Cliente::all();
     }
 
-    public static function listar_servicio_por_campo($nombre, $valor)
+    public static function listar_cliente_por_campo($nombre, $valor)
     {
-        return servicio::find('all', array("conditions" => "$nombre LIKE '%$valor%'"));
+        return Cliente::find('all', array("conditions" => "$nombre LIKE '%$valor%'"));
     }
-    public static function listar_servicio_por_sql($sql)
+    public static function listar_cliente_por_sql($sql)
     {
-        return servicio::find_by_sql($sql);
+        return Cliente::find_by_sql($sql);
     }
+    
 }

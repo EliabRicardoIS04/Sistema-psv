@@ -1,7 +1,7 @@
 
 <?php
 
-include_once('../libs/bdConfig.php');                                           
+include_once '../libs/bdConfig.php';                                           
 
 class Turno extends ActiveRecord\Model
 {

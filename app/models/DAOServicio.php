@@ -24,12 +24,12 @@ class DAOServicio{
     }   
 
     public static function eliminar_servicio($servicioId){
-        return Turno::delete_all(array('condition' => "servicioId = $servicioId"));
+        return servicio::delete_all(array('condition' => "servicioId = $servicioId"));
     }
     
 
     public static function modificar_servicio($servicio){
-        return DAOTurno::agregar_turno($servicio);
+        return DAOServicio::agregar_servicio($servicio);
     }
 
     public static function listar_servicio(){

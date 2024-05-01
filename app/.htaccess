@@ -1,4 +1,4 @@
-Options -Indexes
+
 
 <Files "bdConfig.php">
     Allow from all
